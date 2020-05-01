@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 const REVIEWS = [
     'reviews',
-    'reviews1'
+    'reviews1',
+    'reviews3'
     
 ];
 
