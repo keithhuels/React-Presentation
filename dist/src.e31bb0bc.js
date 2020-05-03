@@ -34803,7 +34803,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var REVIEWS = ['reviews', 'reviews1'];
+var REVIEWS = ['reviews', 'reviews1', 'reviews3'];
 
 var Reviews = /*#__PURE__*/function (_Component) {
   _inherits(Reviews, _Component);
@@ -35025,11 +35025,11 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
   _createClass(ReactIntro, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " \"React is a Javascript library for building user interfacts\" -reactjs.org"), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("h2", null, "React Introduction"), /*#__PURE__*/_react.default.createElement("img", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " \"React is a Javascript library for building user interfaces\" -reactjs.org"), /*#__PURE__*/_react.default.createElement("h2", null, "React Introduction"), /*#__PURE__*/_react.default.createElement("img", {
         src: _handshake.default,
         alt: "handshake",
         className: "handshake"
-      }), /*#__PURE__*/_react.default.createElement("p", null, "    "), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "There are three core pillars of web development: HTML, CSS, and Javascript", /*#__PURE__*/_react.default.createElement("p", null), /*#__PURE__*/_react.default.createElement("img", {
+      }), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "There are three core pillars of web development: HTML, CSS, and Javascript", /*#__PURE__*/_react.default.createElement("p", null), /*#__PURE__*/_react.default.createElement("img", {
         src: _pillar.default,
         alt: "pillar",
         className: "pillar"
@@ -35044,6 +35044,156 @@ var _default = ReactIntro;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg"}],"assets/graph.png":[function(require,module,exports) {
 module.exports = "/graph.2482a22b.png";
+},{}],"assets/airbnb.jpeg":[function(require,module,exports) {
+module.exports = "/airbnb.df4442f6.jpeg";
+},{}],"assets/facebook.png":[function(require,module,exports) {
+module.exports = "/facebook.b07338d5.png";
+},{}],"assets/netflix.png":[function(require,module,exports) {
+module.exports = "/netflix.cad3e67c.png";
+},{}],"assets/twitter.png":[function(require,module,exports) {
+module.exports = "/twitter.86d5ceec.png";
+},{}],"assets/uber.png":[function(require,module,exports) {
+module.exports = "/uber.481f259b.png";
+},{}],"assets/slack.jpg":[function(require,module,exports) {
+module.exports = "/slack.2bb72818.jpg";
+},{}],"data/companyExamples.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _airbnb = _interopRequireDefault(require("../assets/airbnb.jpeg"));
+
+var _facebook = _interopRequireDefault(require("../assets/facebook.png"));
+
+var _netflix = _interopRequireDefault(require("../assets/netflix.png"));
+
+var _twitter = _interopRequireDefault(require("../assets/twitter.png"));
+
+var _uber = _interopRequireDefault(require("../assets/uber.png"));
+
+var _slack = _interopRequireDefault(require("../assets/slack.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var COMPANY_EXAMPLES = [{
+  id: 1,
+  image: _airbnb.default,
+  link: 'https://www.airbnb.com/'
+}, {
+  id: 2,
+  image: _facebook.default,
+  link: 'https://www.facebook.com/'
+}, {
+  id: 3,
+  image: _netflix.default,
+  link: 'https://www.netflix.com/'
+}, {
+  id: 4,
+  image: _twitter.default,
+  link: 'https://twitter.com/explore'
+}, {
+  id: 5,
+  image: _uber.default,
+  link: 'https://www.uber.com/'
+}, {
+  id: 6,
+  image: _slack.default,
+  link: 'https://slack.com/'
+}];
+var _default = COMPANY_EXAMPLES;
+exports.default = _default;
+},{"../assets/airbnb.jpeg":"assets/airbnb.jpeg","../assets/facebook.png":"assets/facebook.png","../assets/netflix.png":"assets/netflix.png","../assets/twitter.png":"assets/twitter.png","../assets/uber.png":"assets/uber.png","../assets/slack.jpg":"assets/slack.jpg"}],"components/CompanyExamples.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _companyExamples = _interopRequireDefault(require("../data/companyExamples"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var CompanyExample = /*#__PURE__*/function (_Component) {
+  _inherits(CompanyExample, _Component);
+
+  var _super = _createSuper(CompanyExample);
+
+  function CompanyExample() {
+    _classCallCheck(this, CompanyExample);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(CompanyExample, [{
+    key: "render",
+    value: function render() {
+      var _this$props$companyEx = this.props.companyExample,
+          link = _this$props$companyEx.link,
+          image = _this$props$companyEx.image;
+      return /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("a", {
+        href: link
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: image,
+        alt: "company-example",
+        style: {
+          width: 80,
+          height: 80,
+          margin: 10
+        }
+      })));
+    }
+  }]);
+
+  return CompanyExample;
+}(_react.Component);
+
+var CompanyExamples = function CompanyExamples() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Can anyone guess what these companies have in common?"), /*#__PURE__*/_react.default.createElement("div", null, _companyExamples.default.map(function (COMPANY_EXAMPLE) {
+    return /*#__PURE__*/_react.default.createElement(CompanyExample, {
+      key: COMPANY_EXAMPLE.id,
+      companyExample: COMPANY_EXAMPLE
+    });
+  })));
+};
+
+var _default = CompanyExamples;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../data/companyExamples":"data/companyExamples.js"}],"assets/HR2020.png":[function(require,module,exports) {
+module.exports = "/HR2020.32a922f4.png";
+},{}],"assets/HR2019.png":[function(require,module,exports) {
+module.exports = "/HR2019.d720feef.png";
 },{}],"components/WhyReact.js":[function(require,module,exports) {
 "use strict";
 
@@ -35055,6 +35205,12 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _graph = _interopRequireDefault(require("../assets/graph.png"));
+
+var _CompanyExamples = _interopRequireDefault(require("./CompanyExamples"));
+
+var _HR = _interopRequireDefault(require("../assets/HR2020.png"));
+
+var _HR2 = _interopRequireDefault(require("../assets/HR2019.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35098,11 +35254,27 @@ var WhyReact = /*#__PURE__*/function (_Component) {
   _createClass(WhyReact, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "React is incredibly useful!"), /*#__PURE__*/_react.default.createElement("li", null, "* job listings   *"), /*#__PURE__*/_react.default.createElement("li", null, "* lists of companys that use react *"), /*#__PURE__*/_react.default.createElement("img", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "What's with the hype?"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_CompanyExamples.default, null), /*#__PURE__*/_react.default.createElement("h2", null, "Developers like React"), /*#__PURE__*/_react.default.createElement("img", {
         src: _graph.default,
         alt: "graph",
         className: "graph"
-      }));
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "Job Prospects"), /*#__PURE__*/_react.default.createElement("div", {
+        class: "row"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        class: "column"
+      }, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://research.hackerrank.com/developer-skills/2019/"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: _HR2.default,
+        alt: "Hackerrank Image"
+      }))), /*#__PURE__*/_react.default.createElement("div", {
+        class: "column"
+      }, /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://research.hackerrank.com/developer-skills/2020/"
+      }, /*#__PURE__*/_react.default.createElement("img", {
+        src: _HR.default,
+        alt: "Hackerrank Image"
+      })))));
     }
   }]);
 
@@ -35111,7 +35283,7 @@ var WhyReact = /*#__PURE__*/function (_Component) {
 
 var _default = WhyReact;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/graph.png":"assets/graph.png"}],"assets/JSXExample.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/graph.png":"assets/graph.png","./CompanyExamples":"components/CompanyExamples.js","../assets/HR2020.png":"assets/HR2020.png","../assets/HR2019.png":"assets/HR2019.png"}],"assets/JSXExample.png":[function(require,module,exports) {
 module.exports = "/JSXExample.03f5ae1e.png";
 },{}],"components/HowReactWorks.js":[function(require,module,exports) {
 "use strict";
@@ -35167,7 +35339,7 @@ var HowReactWorks = /*#__PURE__*/function (_Component) {
   _createClass(HowReactWorks, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "How React Works"), /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("u", null, "React uses JSX")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, " JSX is a syntax similar to XML/HTML that enables HTML to be used in Javascript code.  "), /*#__PURE__*/_react.default.createElement("img", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "How React Works"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("u", null, "React uses JSX")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, " JSX is a syntax similar to XML/HTML that enables HTML to be used in Javascript code.  "), /*#__PURE__*/_react.default.createElement("img", {
         src: _JSXExample.default,
         alt: "JSXExample",
         className: "JSXExample"
@@ -35189,6 +35361,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _companyExamples = _interopRequireDefault(require("../data/companyExamples"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -35230,7 +35406,7 @@ var OurCode = /*#__PURE__*/function (_Component) {
   _createClass(OurCode, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, /*#__PURE__*/_react.default.createElement("a", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "Code Walkthrough"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, /*#__PURE__*/_react.default.createElement("a", {
         href: "https://github.com/keithhuels/React-Presentation"
       }, "Here's the code we used to build this presentation!")));
     }
@@ -35241,7 +35417,7 @@ var OurCode = /*#__PURE__*/function (_Component) {
 
 var _default = OurCode;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Sources.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../data/companyExamples":"data/companyExamples.js"}],"components/Sources.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35291,7 +35467,7 @@ var Sources = /*#__PURE__*/function (_Component) {
   _createClass(Sources, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Sources"), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "Sources"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
         href: "https://www.udemy.com/course/react-js-and-redux-mastering-web-apps/"
       }, "Udemy - \"React JS Web Development - The Essentials Bootcamp\"")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
         href: "https://www.w3schools.com/react/react_css.asp"
@@ -35563,7 +35739,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55068" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58820" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -5,7 +5,9 @@ class HowReactWorks extends Component {
     render(){
         return(
             <div>
+            <hr />
                 <h1>How React Works</h1>
+            <hr />
             <h2><u>React uses JSX</u></h2>
             <ul>
                 <li> JSX is a syntax similar to XML/HTML that enables

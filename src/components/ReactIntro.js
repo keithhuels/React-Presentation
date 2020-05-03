@@ -6,14 +6,12 @@ class ReactIntro extends Component {
 render() {
     return(
         <div>
-            <h1> "React is a Javascript library for building user interfacts" -reactjs.org</h1>
-         <p> </p>   
-         <p> </p>
+            <h1> "React is a Javascript library for building user interfaces" -reactjs.org</h1>
+
 
          <h2>React Introduction</h2> 
          <img src={handshake} alt='handshake' className='handshake'/>
     
-       <p>    </p>  
          <ul>
              <li>
                   There are three core pillars of web development: HTML, CSS, and Javascript
