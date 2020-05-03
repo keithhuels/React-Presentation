@@ -34803,7 +34803,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var REVIEWS = ['reviews', 'reviews1', 'reviews3'];
+var REVIEWS = ['"React poised to overtake AngularJS in 2019"-research.hackerrank.com', '"React has exceeded our requirements and enabled us to build a tremendous foundation on which to innovate the Netflix experience." -Jordanna Kwok, Engineering Manager at Netflix', '"Component-based design isn’t unique to React, but the best tools set you up for success and the highly compositional nature of React made it particularly easy to reason about."- Katie Sievert, Senior Software Engineer at Twitter'];
 
 var Reviews = /*#__PURE__*/function (_Component) {
   _inherits(Reviews, _Component);
@@ -34842,8 +34842,8 @@ var Reviews = /*#__PURE__*/function (_Component) {
           return _this.setState({
             fadeIn: false
           });
-        }, 2000);
-      }, 4000);
+        }, 4000);
+      }, 6000);
     });
 
     return _this;
@@ -34858,7 +34858,7 @@ var Reviews = /*#__PURE__*/function (_Component) {
         return _this2.setState({
           fadeIn: false
         });
-      }, 2000);
+      }, 4000);
       this.animateReviews();
     }
   }, {
@@ -34956,7 +34956,7 @@ var App = /*#__PURE__*/function (_Component) {
         src: _react_icon.default,
         alt: "react_icon",
         className: "react_icon"
-      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("h1", null, "A Presentation of React using React!")), /*#__PURE__*/_react.default.createElement("h2", null, "By Keith Huels, Josh Hootman, Karey Vongchareunexay and James Ndungu "), /*#__PURE__*/_react.default.createElement(_Reviews.default, null));
+      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("h1", null, "A Presentation of React using React!")), /*#__PURE__*/_react.default.createElement("h2", null, "By Keith Huels, Josh Hootman "), /*#__PURE__*/_react.default.createElement(_Reviews.default, null));
     }
   }]);
 
@@ -35739,7 +35739,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58820" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53474" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -23,7 +23,7 @@ class App extends Component{
                <span><h1>A Presentation of React using React!</h1></span>
                       
         
-                <h2>By Keith Huels, Josh Hootman, Karey Vongchareunexay and James Ndungu </h2>
+                <h2>By Keith Huels, Josh Hootman </h2>
                  <Reviews />
                
       
