@@ -18,7 +18,6 @@ class App extends Component{
        return(
       
             <div>
-                 
                 <span><img src={react_icon} alt='react_icon' className='react_icon'/></span>
                 <p> </p>
                <span><h1>A Presentation of React using React!</h1></span>

@@ -14,24 +14,34 @@
 body{
     text-align: center;
     font-size: 20px;
-    padding: 0%;
+    padding: 0;
     font-family: 'RobotoCondensed';
     height: 100%;
-   background-color: lightblue;
+    background-color: lightblue;
 }
 
 h3,h4,h5 {
     font-family: 'EconomicaBold';   
 }
 
+li {
+    font-family: 'EconomicaBold';
+    padding: 15px;
+
+    
+}
+
 h1 {
     font-family: 'EconomicaBold';
     font-size: 60px;
+    padding-bottom: 15px;
+
 }
 
 h2 {
     font-family: 'EconomicaBold';
     font-size: 40px;
+    padding: 20px;
 }
 .profilepic {
     width: 450px;
@@ -51,6 +61,22 @@ h2 {
     animation-duration: 2s
 }
 
+.react_icon{
+    padding: 60px;
+}
+
+.handshake{
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.pillar{
+    padding: 40px;
+}
+.graph{
+    padding: 10px;
+    
+}
+
 @keyframes fade-out {
     from {opacity: 100}
     to {opacity:0}
@@ -68,4 +94,28 @@ ul {text-align: center;
 li {
     font-size:40px;
 }
+
+hr {
+    border: 1px solid black;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+
 
