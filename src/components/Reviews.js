@@ -12,7 +12,7 @@ class Reviews extends Component{
     state = { reviewsIndex: 0, fadeIn: true};
 
     componentDidMount() {
-        this.timeout = setTimeout(() => this.setState({ fadeIn: false}), 4000);
+        this.timeout = setTimeout(() => this.setState({ fadeIn: false}), 6000);
        
 
         this.animateReviews();
@@ -36,8 +36,8 @@ class Reviews extends Component{
             //sets reviewindex to local constant
             this.setState({ reviewsIndex, fadeIn : true});
 
-            this.timeout = setTimeout(() => this.setState({ fadeIn: false}), 4000);
-        }, 6000);
+            this.timeout = setTimeout(() => this.setState({ fadeIn: false}), 6000);
+        }, 8000);
 
        
     }

@@ -3,6 +3,7 @@ import graph from '../assets/graph.png';
 import CompanyExamples from './CompanyExamples';
 import hr2020 from '../assets/HR2020.png';
 import hr2019 from '../assets/HR2019.png'
+import ScrollToTop from './ScrollToTop';
 
 class WhyReact extends Component {
 
@@ -36,7 +37,7 @@ render() {
         
         
 
-        
+        <ScrollToTop/>
         </div>
 
     )
