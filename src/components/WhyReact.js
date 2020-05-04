@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import graph from '../assets/graph.png';
+import graph from '../assets/framework_chart4.png';
 import CompanyExamples from './CompanyExamples';
 import hr2020 from '../assets/HR2020.png';
 import hr2019 from '../assets/HR2019.png'
@@ -21,7 +21,15 @@ render() {
          <img src={graph} alt='graph' className='graph'/>
          
         <h2>Job Prospects</h2>
-            <div class='row'>
+            <div class='hr_images'>
+                <a href="https://research.hackerrank.com/developer-skills/2019/">
+                    <img src={hr2019} alt='Hackerrank Image'/>
+                </a>
+                <a href="https://research.hackerrank.com/developer-skills/2020/">
+                    <img src={hr2020} alt='Hackerrank Image'/>
+                </a>
+            </div>
+            {/* <div class='row'>
                 <div class='column'>
                     <a href="https://research.hackerrank.com/developer-skills/2019/">
                     <img src={hr2019} alt='Hackerrank Image'/>
@@ -33,7 +41,7 @@ render() {
                 </a>
                 
             </div>
-        </div>
+        </div> */}
         
         
 
