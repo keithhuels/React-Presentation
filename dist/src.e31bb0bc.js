@@ -35101,6 +35101,10 @@ exports.default = _default;
 module.exports = "/handshake.fc8191b6.png";
 },{}],"assets/pillar.jpg":[function(require,module,exports) {
 module.exports = "/pillar.1e2cc3ed.jpg";
+},{}],"assets/react-black.png":[function(require,module,exports) {
+module.exports = "/react-black.61321cb2.png";
+},{}],"assets/js-react-orbit-color1.png":[function(require,module,exports) {
+module.exports = "/js-react-orbit-color1.86c9a9bb.png";
 },{}],"components/ReactIntro.js":[function(require,module,exports) {
 "use strict";
 
@@ -35116,6 +35120,10 @@ var _handshake = _interopRequireDefault(require("../assets/handshake.png"));
 var _pillar = _interopRequireDefault(require("../assets/pillar.jpg"));
 
 var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
+
+var _reactBlack = _interopRequireDefault(require("../assets/react-black.png"));
+
+var _jsReactOrbitColor = _interopRequireDefault(require("../assets/js-react-orbit-color1.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35159,15 +35167,19 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
   _createClass(ReactIntro, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " \"React is a Javascript library for building user interfaces\" -reactjs.org"), /*#__PURE__*/_react.default.createElement("h2", null, "React Introduction"), /*#__PURE__*/_react.default.createElement("img", {
-        src: _handshake.default,
-        alt: "handshake",
-        className: "handshake"
-      }), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "There are three core pillars of web development: HTML, CSS, and Javascript", /*#__PURE__*/_react.default.createElement("p", null), /*#__PURE__*/_react.default.createElement("img", {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "React Introduction"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("li", null, "Released in 2013, React is a JavaScript library that was designed by Facebook"), /*#__PURE__*/_react.default.createElement("img", {
+        src: _reactBlack.default,
+        alt: "logo",
+        className: "reactLogo"
+      }), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("h2", null, "Quick Refresher"), /*#__PURE__*/_react.default.createElement("li", null, "There are three core pillars of web development: HTML, CSS, and Javascript", /*#__PURE__*/_react.default.createElement("p", null), /*#__PURE__*/_react.default.createElement("img", {
         src: _pillar.default,
         alt: "pillar",
         className: "pillar"
-      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("li", null, "React is used in the Javascript side of web development.")), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
+      })), /*#__PURE__*/_react.default.createElement("h2", null, "How React fits into the picture"), /*#__PURE__*/_react.default.createElement("li", null, "React is used on the javascript side of web development, as it is a JavaScript library."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _jsReactOrbitColor.default,
+        alt: "react and js image",
+        className: "react_and_js"
+      }), /*#__PURE__*/_react.default.createElement("li", null, "It allows developers to compose complex user interfaces from small isolated pieces of code called \"components\"")), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -35176,7 +35188,7 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
 
 var _default = ReactIntro;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg","./ScrollToTop":"components/ScrollToTop.js"}],"assets/graph.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg","./ScrollToTop":"components/ScrollToTop.js","../assets/react-black.png":"assets/react-black.png","../assets/js-react-orbit-color1.png":"assets/js-react-orbit-color1.png"}],"assets/graph.png":[function(require,module,exports) {
 module.exports = "/graph.2482a22b.png";
 },{}],"assets/airbnb.jpeg":[function(require,module,exports) {
 module.exports = "/airbnb.df4442f6.jpeg";
@@ -35925,7 +35937,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56977" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57856" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
