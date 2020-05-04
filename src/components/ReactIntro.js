@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import handshake from '../assets/handshake.png';
 import pillar from '../assets/pillar.jpg';
+import ScrollToTop from './ScrollToTop';
 
 class ReactIntro extends Component {
 render() {
@@ -25,7 +26,7 @@ render() {
          </ul>
          
 
-
+<ScrollToTop/>
         </div>
     )
 } 

@@ -34842,8 +34842,8 @@ var Reviews = /*#__PURE__*/function (_Component) {
           return _this.setState({
             fadeIn: false
           });
-        }, 4000);
-      }, 6000);
+        }, 6000);
+      }, 8000);
     });
 
     return _this;
@@ -34858,7 +34858,7 @@ var Reviews = /*#__PURE__*/function (_Component) {
         return _this2.setState({
           fadeIn: false
         });
-      }, 4000);
+      }, 6000);
       this.animateReviews();
     }
   }, {
@@ -34890,7 +34890,137 @@ var _default = Reviews;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"assets/react_icon.png":[function(require,module,exports) {
 module.exports = "/react_icon.ceb6e93b.png";
-},{}],"components/App.js":[function(require,module,exports) {
+},{}],"components/ScrollToTop.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var ScrollToTop = /*#__PURE__*/function (_Component) {
+  _inherits(ScrollToTop, _Component);
+
+  var _super = _createSuper(ScrollToTop);
+
+  function ScrollToTop(props) {
+    var _this;
+
+    _classCallCheck(this, ScrollToTop);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      is_visible: false
+    };
+    return _this;
+  }
+
+  _createClass(ScrollToTop, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var scrollComponent = this;
+      document.addEventListener("scroll", function (e) {
+        scrollComponent.toggleVisibility();
+      });
+    }
+  }, {
+    key: "toggleVisibility",
+    value: function toggleVisibility() {
+      if (window.pageYOffset > 300) {
+        this.setState({
+          is_visible: true
+        });
+      } else {
+        this.setState({
+          is_visible: false
+        });
+      }
+    }
+  }, {
+    key: "scrollToTop",
+    value: function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var is_visible = this.state.is_visible;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "scroll-to-top"
+      }, is_visible && /*#__PURE__*/_react.default.createElement("div", {
+        onClick: function onClick() {
+          return _this2.scrollToTop();
+        }
+      }, /*#__PURE__*/_react.default.createElement("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        height: "38.735",
+        width: "33.749"
+      }, /*#__PURE__*/_react.default.createElement("g", {
+        transform: "translate(-18.121 -3.364)"
+      }, /*#__PURE__*/_react.default.createElement("rect", {
+        ry: "4.928",
+        y: "3.364",
+        x: "18.121",
+        height: "38.735",
+        width: "33.749",
+        fill: "#00f"
+      }), /*#__PURE__*/_react.default.createElement("g", {
+        transform: "translate(-.48 2.134)"
+      }, /*#__PURE__*/_react.default.createElement("rect", {
+        ry: "4.928",
+        y: "1.229",
+        x: "18.601",
+        height: "38.735",
+        width: "33.749",
+        fill: "url(#b)"
+      }), /*#__PURE__*/_react.default.createElement("g", {
+        fill: "#ececec"
+      }, /*#__PURE__*/_react.default.createElement("path", {
+        d: "M22.435 17.62l4.684 4.685 5.044-5.044v19.352h6.625V17.26l5.044 5.044 4.683-4.684-13.04-13.04z"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M22.435 17.62l4.684 4.685 5.044-5.044v19.352h6.625V17.26l5.044 5.044 4.683-4.684-13.04-13.04z"
+      })))))));
+    }
+  }]);
+
+  return ScrollToTop;
+}(_react.Component);
+
+exports.default = ScrollToTop;
+},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34903,6 +35033,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _Reviews = _interopRequireDefault(require("./Reviews"));
 
 var _react_icon = _interopRequireDefault(require("../assets/react_icon.png"));
+
+var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34956,7 +35088,7 @@ var App = /*#__PURE__*/function (_Component) {
         src: _react_icon.default,
         alt: "react_icon",
         className: "react_icon"
-      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("h1", null, "A Presentation of React using React!")), /*#__PURE__*/_react.default.createElement("h2", null, "By Keith Huels, Josh Hootman "), /*#__PURE__*/_react.default.createElement(_Reviews.default, null));
+      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("h1", null, "A Presentation of React using React!")), /*#__PURE__*/_react.default.createElement("h2", null, "By Keith Huels, Josh Hootman "), /*#__PURE__*/_react.default.createElement(_Reviews.default, null), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -34965,7 +35097,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Reviews":"components/Reviews.js","../assets/react_icon.png":"assets/react_icon.png"}],"assets/handshake.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Reviews":"components/Reviews.js","../assets/react_icon.png":"assets/react_icon.png","./ScrollToTop":"components/ScrollToTop.js"}],"assets/handshake.png":[function(require,module,exports) {
 module.exports = "/handshake.fc8191b6.png";
 },{}],"assets/pillar.jpg":[function(require,module,exports) {
 module.exports = "/pillar.1e2cc3ed.jpg";
@@ -34982,6 +35114,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _handshake = _interopRequireDefault(require("../assets/handshake.png"));
 
 var _pillar = _interopRequireDefault(require("../assets/pillar.jpg"));
+
+var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35033,7 +35167,7 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
         src: _pillar.default,
         alt: "pillar",
         className: "pillar"
-      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("li", null, "React is used in the Javascript side of web development.")));
+      })), /*#__PURE__*/_react.default.createElement("p", null, " "), /*#__PURE__*/_react.default.createElement("li", null, "React is used in the Javascript side of web development.")), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -35042,7 +35176,7 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
 
 var _default = ReactIntro;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg"}],"assets/graph.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg","./ScrollToTop":"components/ScrollToTop.js"}],"assets/graph.png":[function(require,module,exports) {
 module.exports = "/graph.2482a22b.png";
 },{}],"assets/airbnb.jpeg":[function(require,module,exports) {
 module.exports = "/airbnb.df4442f6.jpeg";
@@ -35212,6 +35346,8 @@ var _HR = _interopRequireDefault(require("../assets/HR2020.png"));
 
 var _HR2 = _interopRequireDefault(require("../assets/HR2019.png"));
 
+var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -35274,7 +35410,7 @@ var WhyReact = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: _HR.default,
         alt: "Hackerrank Image"
-      })))));
+      })))), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -35283,8 +35419,20 @@ var WhyReact = /*#__PURE__*/function (_Component) {
 
 var _default = WhyReact;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/graph.png":"assets/graph.png","./CompanyExamples":"components/CompanyExamples.js","../assets/HR2020.png":"assets/HR2020.png","../assets/HR2019.png":"assets/HR2019.png"}],"assets/JSXExample.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/graph.png":"assets/graph.png","./CompanyExamples":"components/CompanyExamples.js","../assets/HR2020.png":"assets/HR2020.png","../assets/HR2019.png":"assets/HR2019.png","./ScrollToTop":"components/ScrollToTop.js"}],"assets/JSXExample.png":[function(require,module,exports) {
 module.exports = "/JSXExample.03f5ae1e.png";
+},{}],"assets/BundlingEx.png":[function(require,module,exports) {
+module.exports = "/BundlingEx.2551ea5a.png";
+},{}],"assets/DOM.png":[function(require,module,exports) {
+module.exports = "/DOM.288854d2.png";
+},{}],"assets/Example.png":[function(require,module,exports) {
+module.exports = "/Example.73229f65.png";
+},{}],"assets/iSurRender.png":[function(require,module,exports) {
+module.exports = "/iSurRender.fc7b5310.png";
+},{}],"assets/CompEx.png":[function(require,module,exports) {
+module.exports = "/CompEx.59ff6ca6.png";
+},{}],"assets/huh.jpg":[function(require,module,exports) {
+module.exports = "/huh.94334cdd.jpg";
 },{}],"components/HowReactWorks.js":[function(require,module,exports) {
 "use strict";
 
@@ -35296,6 +35444,20 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _JSXExample = _interopRequireDefault(require("../assets/JSXExample.png"));
+
+var _BundlingEx = _interopRequireDefault(require("../assets/BundlingEx.png"));
+
+var _DOM = _interopRequireDefault(require("../assets/DOM.png"));
+
+var _Example = _interopRequireDefault(require("../assets/Example.png"));
+
+var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
+
+var _iSurRender = _interopRequireDefault(require("../assets/iSurRender.png"));
+
+var _CompEx = _interopRequireDefault(require("../assets/CompEx.png"));
+
+var _huh = _interopRequireDefault(require("../assets/huh.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35342,8 +35504,32 @@ var HowReactWorks = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "How React Works"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("u", null, "React uses JSX")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, " JSX is a syntax similar to XML/HTML that enables HTML to be used in Javascript code.  "), /*#__PURE__*/_react.default.createElement("img", {
         src: _JSXExample.default,
         alt: "JSXExample",
-        className: "JSXExample"
-      }), /*#__PURE__*/_react.default.createElement("li", null, " However, JSX is not supported by the browser. To allow the browser to render JSX, we have to use transpilation."), /*#__PURE__*/_react.default.createElement("h2", null, "Transpiling"), /*#__PURE__*/_react.default.createElement("li", null, "Transpiling is the process of translating modern Javascript code into a syntax that the browser supports. As Javascript constantly evolves, browsers like Chrome, FireFox and Edge must keep up and support the changes."), /*#__PURE__*/_react.default.createElement("h2", null, " Bundling "), /*#__PURE__*/_react.default.createElement("li", null)));
+        className: "Example"
+      }), /*#__PURE__*/_react.default.createElement("li", null, " However, JSX is not supported by the browser. To allow the browser to render JSX, we have to use transpilation."), /*#__PURE__*/_react.default.createElement("h2", null, "React needs Transpiling"), /*#__PURE__*/_react.default.createElement("li", null, "Transpiling is the process of translating modern Javascript code into a syntax that the browser supports. As Javascript constantly evolves, browsers like Chrome, FireFox and Edge must keep up and support the changes."), /*#__PURE__*/_react.default.createElement("h2", null, " React uses Bundling "), /*#__PURE__*/_react.default.createElement("li", null, "Bundling is the process of \"packaging\" multiple Javascript files and their dependencies into one core file that the HTML can refer to."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _BundlingEx.default,
+        alt: "BundlingEx",
+        className: "BundlingEx"
+      }), /*#__PURE__*/_react.default.createElement("li", null, "We used Parcel-bundler and Babel to achieve bundling and transpiling."), /*#__PURE__*/_react.default.createElement("h2", null, " React uses VDOM"), /*#__PURE__*/_react.default.createElement("li", null, "When a web page is loaded, the browser creates a DOM of the page"), /*#__PURE__*/_react.default.createElement("li", null, "A DOM, or Document Object Model, is a cross-platform API that standardizes how to get, change, add or delete HTML elements."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _DOM.default,
+        alt: "DOM",
+        className: "DOM"
+      }), /*#__PURE__*/_react.default.createElement("li", null, "React creates a Virtual DOM, where a virtual representation of the User Interface is kept in memory and synced with the \"real\" DOM by a library such as ReactDOM."), /*#__PURE__*/_react.default.createElement("h2", null, "React uses ReactDOM"), /*#__PURE__*/_react.default.createElement("li", null, "ReactDOM is a library that provides methods that can be used as an efficient way to manage HTML DOM elements. "), /*#__PURE__*/_react.default.createElement("h2", null, "Ok...so what does that do for us as developers?"), /*#__PURE__*/_react.default.createElement("li", null, "ReactDOM is a library, so it uses a number of methods like render() and document methods like getElementById() that are used for updating the User Interface faster by bypassing conventional DOM event-handing, among many other uses."), /*#__PURE__*/_react.default.createElement("li", null, "Here's an example of how ReactDOM is used in conjuction with React-Router to create the navigation pane we used in this presentation."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _Example.default,
+        alt: "Example",
+        className: "Example"
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "React uses Components"), /*#__PURE__*/_react.default.createElement("li", null, "Components in React are reusable pieces of React code to control parts of the User Interface. Components capture the structure of the UI and can have internal data to track the user behavior throughout the lifetime of the app."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _CompEx.default,
+        alt: "CompEx",
+        className: "CompEx"
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "React uses Lifecycle methods"), /*#__PURE__*/_react.default.createElement("li", null, "Lifecycle methods are the series of events that happen from the \"birth\" of a React component, to its \"death\"."), /*#__PURE__*/_react.default.createElement("h2", null, "React NEEDS render()"), /*#__PURE__*/_react.default.createElement("li", null, " The render() method is the most important lifecycle method. As the name suggests, it handles the rendering of React componenets to the UI. Every component in React MUST have a render() method, even if it just returns a null."), /*#__PURE__*/_react.default.createElement("img", {
+        src: _iSurRender.default,
+        alt: "iSurRender",
+        className: "iSurRender"
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "Here are some more common lifecycle methods that React uses when building apps"), /*#__PURE__*/_react.default.createElement("li", null, "fetch()- fetch is a method that can make HTTP requests to grab data. This is primarily used in calling to web API's. "), /*#__PURE__*/_react.default.createElement("li", null, "componentDidMount() and componentWillUnmount()- signals when component's elements have rendered properly and when they have finished. Also best used in making API calls. (We also used these functions to create the fader effect on the main page)")), /*#__PURE__*/_react.default.createElement("img", {
+        src: _huh.default,
+        alt: "huh",
+        className: "huh"
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "So, I kind of get it? What's the bottom line? (and say hello to your mother for me)"), /*#__PURE__*/_react.default.createElement("li", null, " React is made for strong and fast web development for User Interfacts. Components, rendering, ReactDOM, bundling, and JSX are some of the many tools used in conjuction to create responsive, easily-modified web applications! "), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -35352,7 +35538,7 @@ var HowReactWorks = /*#__PURE__*/function (_Component) {
 
 var _default = HowReactWorks;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/JSXExample.png":"assets/JSXExample.png"}],"components/OurCode.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/JSXExample.png":"assets/JSXExample.png","../assets/BundlingEx.png":"assets/BundlingEx.png","../assets/DOM.png":"assets/DOM.png","../assets/Example.png":"assets/Example.png","./ScrollToTop":"components/ScrollToTop.js","../assets/iSurRender.png":"assets/iSurRender.png","../assets/CompEx.png":"assets/CompEx.png","../assets/huh.jpg":"assets/huh.jpg"}],"components/OurCode.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35739,7 +35925,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53474" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56977" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
