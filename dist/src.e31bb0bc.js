@@ -35188,8 +35188,8 @@ var ReactIntro = /*#__PURE__*/function (_Component) {
 
 var _default = ReactIntro;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg","./ScrollToTop":"components/ScrollToTop.js","../assets/react-black.png":"assets/react-black.png","../assets/js-react-orbit-color1.png":"assets/js-react-orbit-color1.png"}],"assets/graph.png":[function(require,module,exports) {
-module.exports = "/graph.2482a22b.png";
+},{"react":"../node_modules/react/index.js","../assets/handshake.png":"assets/handshake.png","../assets/pillar.jpg":"assets/pillar.jpg","./ScrollToTop":"components/ScrollToTop.js","../assets/react-black.png":"assets/react-black.png","../assets/js-react-orbit-color1.png":"assets/js-react-orbit-color1.png"}],"assets/framework_chart4.png":[function(require,module,exports) {
+module.exports = "/framework_chart4.416076c4.png";
 },{}],"assets/airbnb.jpeg":[function(require,module,exports) {
 module.exports = "/airbnb.df4442f6.jpeg";
 },{}],"assets/facebook.png":[function(require,module,exports) {
@@ -35350,7 +35350,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _graph = _interopRequireDefault(require("../assets/graph.png"));
+var _framework_chart = _interopRequireDefault(require("../assets/framework_chart4.png"));
 
 var _CompanyExamples = _interopRequireDefault(require("./CompanyExamples"));
 
@@ -35403,26 +35403,22 @@ var WhyReact = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h1", null, "What's with the hype?"), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_CompanyExamples.default, null), /*#__PURE__*/_react.default.createElement("h2", null, "Developers like React"), /*#__PURE__*/_react.default.createElement("img", {
-        src: _graph.default,
+        src: _framework_chart.default,
         alt: "graph",
         className: "graph"
       }), /*#__PURE__*/_react.default.createElement("h2", null, "Job Prospects"), /*#__PURE__*/_react.default.createElement("div", {
-        class: "row"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        class: "column"
+        class: "hr_images"
       }, /*#__PURE__*/_react.default.createElement("a", {
         href: "https://research.hackerrank.com/developer-skills/2019/"
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: _HR2.default,
         alt: "Hackerrank Image"
-      }))), /*#__PURE__*/_react.default.createElement("div", {
-        class: "column"
-      }, /*#__PURE__*/_react.default.createElement("a", {
+      })), /*#__PURE__*/_react.default.createElement("a", {
         href: "https://research.hackerrank.com/developer-skills/2020/"
       }, /*#__PURE__*/_react.default.createElement("img", {
         src: _HR.default,
         alt: "Hackerrank Image"
-      })))), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
+      }))), /*#__PURE__*/_react.default.createElement(_ScrollToTop.default, null));
     }
   }]);
 
@@ -35431,7 +35427,7 @@ var WhyReact = /*#__PURE__*/function (_Component) {
 
 var _default = WhyReact;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/graph.png":"assets/graph.png","./CompanyExamples":"components/CompanyExamples.js","../assets/HR2020.png":"assets/HR2020.png","../assets/HR2019.png":"assets/HR2019.png","./ScrollToTop":"components/ScrollToTop.js"}],"assets/JSXExample.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/framework_chart4.png":"assets/framework_chart4.png","./CompanyExamples":"components/CompanyExamples.js","../assets/HR2020.png":"assets/HR2020.png","../assets/HR2019.png":"assets/HR2019.png","./ScrollToTop":"components/ScrollToTop.js"}],"assets/JSXExample.png":[function(require,module,exports) {
 module.exports = "/JSXExample.03f5ae1e.png";
 },{}],"assets/BundlingEx.png":[function(require,module,exports) {
 module.exports = "/BundlingEx.2551ea5a.png";
@@ -35937,7 +35933,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57856" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59403" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
