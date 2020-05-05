@@ -34803,7 +34803,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var REVIEWS = ['"React poised to overtake AngularJS in 2019"-research.hackerrank.com', '"React has exceeded our requirements and enabled us to build a tremendous foundation on which to innovate the Netflix experience." -Jordanna Kwok, Engineering Manager at Netflix', '"Component-based design isn’t unique to React, but the best tools set you up for success and the highly compositional nature of React made it particularly easy to reason about."- Katie Sievert, Senior Software Engineer at Twitter'];
+var REVIEWS = ['"React poised to overtake AngularJS in 2019"-research.hackerrank.com', '"React has exceeded our requirements and enabled us to build a tremendous foundation on which to innovate the Netflix experience." -Jordanna Kwok, Engineering Manager at Netflix', '"The best tools set you up for success and the highly compositional nature of React made it particularly easy to reason about."- Katie Sievert, Senior Software Engineer at Twitter'];
 
 var Reviews = /*#__PURE__*/function (_Component) {
   _inherits(Reviews, _Component);
@@ -34827,11 +34827,8 @@ var Reviews = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "animateReviews", function () {
-      // two arg one callback function to fire, second milisecond rate to fire callback
       _this.reviewsInterval = setInterval(function () {
-        //^fixes error of calling setState on unmounted component
-        //create local constant and incriments and modulates to loop back to beginning
-        var reviewsIndex = (_this.state.reviewsIndex + 1) % REVIEWS.length; //sets reviewindex to local constant
+        var reviewsIndex = (_this.state.reviewsIndex + 1) % REVIEWS.length;
 
         _this.setState({
           reviewsIndex: reviewsIndex,
@@ -34866,8 +34863,7 @@ var Reviews = /*#__PURE__*/function (_Component) {
     value: function componentWillUnmount() {
       clearInterval(this.reviewsInterval);
       clearTimeout(this.timeout);
-    } //class property syntax
-
+    }
   }, {
     key: "render",
     //creates title constant by accessing index
@@ -35445,6 +35441,8 @@ module.exports = "/iSurRender.fc7b5310.png";
 module.exports = "/CompEx.59ff6ca6.png";
 },{}],"assets/huh.jpg":[function(require,module,exports) {
 module.exports = "/huh.94334cdd.jpg";
+},{}],"assets/StateEx.png":[function(require,module,exports) {
+module.exports = "/StateEx.7d4aabea.png";
 },{}],"components/HowReactWorks.js":[function(require,module,exports) {
 "use strict";
 
@@ -35470,6 +35468,8 @@ var _iSurRender = _interopRequireDefault(require("../assets/iSurRender.png"));
 var _CompEx = _interopRequireDefault(require("../assets/CompEx.png"));
 
 var _huh = _interopRequireDefault(require("../assets/huh.jpg"));
+
+var _StateEx = _interopRequireDefault(require("../assets/StateEx.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35533,6 +35533,10 @@ var HowReactWorks = /*#__PURE__*/function (_Component) {
         src: _CompEx.default,
         alt: "CompEx",
         className: "CompEx"
+      }), /*#__PURE__*/_react.default.createElement("h2", null, "React components have state "), /*#__PURE__*/_react.default.createElement("li", null, "The state of a component is the internal data it holds. This data can be changed through the component itself, often called \"updating the state\". "), /*#__PURE__*/_react.default.createElement("img", {
+        src: _StateEx.default,
+        alt: "StateEx",
+        className: "StateEx"
       }), /*#__PURE__*/_react.default.createElement("h2", null, "React uses Lifecycle methods"), /*#__PURE__*/_react.default.createElement("li", null, "Lifecycle methods are the series of events that happen from the \"birth\" of a React component, to its \"death\"."), /*#__PURE__*/_react.default.createElement("h2", null, "React NEEDS render()"), /*#__PURE__*/_react.default.createElement("li", null, " The render() method is the most important lifecycle method. As the name suggests, it handles the rendering of React componenets to the UI. Every component in React MUST have a render() method, even if it just returns a null."), /*#__PURE__*/_react.default.createElement("img", {
         src: _iSurRender.default,
         alt: "iSurRender",
@@ -35550,7 +35554,7 @@ var HowReactWorks = /*#__PURE__*/function (_Component) {
 
 var _default = HowReactWorks;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../assets/JSXExample.png":"assets/JSXExample.png","../assets/BundlingEx.png":"assets/BundlingEx.png","../assets/DOM.png":"assets/DOM.png","../assets/Example.png":"assets/Example.png","./ScrollToTop":"components/ScrollToTop.js","../assets/iSurRender.png":"assets/iSurRender.png","../assets/CompEx.png":"assets/CompEx.png","../assets/huh.jpg":"assets/huh.jpg"}],"components/OurCode.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../assets/JSXExample.png":"assets/JSXExample.png","../assets/BundlingEx.png":"assets/BundlingEx.png","../assets/DOM.png":"assets/DOM.png","../assets/Example.png":"assets/Example.png","./ScrollToTop":"components/ScrollToTop.js","../assets/iSurRender.png":"assets/iSurRender.png","../assets/CompEx.png":"assets/CompEx.png","../assets/huh.jpg":"assets/huh.jpg","../assets/StateEx.png":"assets/StateEx.png"}],"components/OurCode.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35625,6 +35629,10 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _ScrollToTop = _interopRequireDefault(require("./ScrollToTop"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -35672,10 +35680,18 @@ var Sources = /*#__PURE__*/function (_Component) {
       }, "w3 Schools")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
         href: "https://stackoverflow.com/questions/18665171/how-to-make-the-main-content-div-fill-height-of-screen-with-css"
       }, "Stack Overflow")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://reactjs.org/"
+      }, "React")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
         href: "https://www.sitepoint.com/community/t/help-with-bullet-list-alignment-needed-please/44332"
       }, "sitepoint")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
         href: "https://www.c-sharpcorner.com/article/what-and-why-reactjs/"
-      }, "C# Corner")));
+      }, "C# Corner")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://research.hackerrank.com/developer-skills/2019/"
+      }, "HackerRank")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://netflixtechblog.com/netflix-likes-react-509675426db"
+      }, "The Netflix Tech Blog")), /*#__PURE__*/_react.default.createElement("h2", null, " ", /*#__PURE__*/_react.default.createElement("a", {
+        href: "https://www.businessfast.co.uk/8-tech-companies-discuss-the-advantages-of-using-react-js-built-in/"
+      }, "BusinessFast")));
     }
   }]);
 
@@ -35684,7 +35700,7 @@ var Sources = /*#__PURE__*/function (_Component) {
 
 var _default = Sources;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Header.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./ScrollToTop":"components/ScrollToTop.js"}],"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35937,7 +35953,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57856" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50772" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
